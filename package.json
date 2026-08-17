@@ -1,0 +1,36 @@
+{
+    "bin": {"aniversario": "jdeploy-bundle/jdeploy.js"},
+    "description": "jDeploy Swing Starter Project",
+    "main": "index.js",
+    "preferGlobal": true,
+    "version": "1.0.0",
+    "jdeploy": {
+        "singleton": true,
+        "fallbackToUniversal": false,
+        "buildCommand": [
+            "./mvnw",
+            "package"
+        ],
+        "publishTargets": [{
+            "name": "github: github",
+            "type": "GITHUB",
+            "url": "https://github.com/1920023/aniversarip.git"
+        }],
+        "javaVersion": "25",
+        "jar": ".jdeploy/8vo_aniversario.jar",
+        "title": "8vo aniversario",
+        "platformBundlesEnabled": false,
+        "downloadPage": {"platforms": ["default"]}
+    },
+    "dependencies": {
+        "command-exists-promise": "^2.0.2",
+        "node-fetch": "2.6.7",
+        "tar": "^4.4.8",
+        "yauzl": "^2.10.0",
+        "shelljs": "^0.8.4"
+    },
+    "license": "ISC",
+    "name": "aniversario",
+    "files": ["jdeploy-bundle"],
+    "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
+}
